@@ -4,6 +4,8 @@
 
 Este projeto implementa um sistema de gerenciamento de pedidos que simula um fluxo de pedidos de clientes, incluindo cálculo de totais, notificações, pagamento e atualização de status.
 
+Trata-se de um projeto proporcionado pela Alura como estudo dos princípios **SOLID** e padrões de design.
+
 ---
 
 ## **Funcionalidades**
