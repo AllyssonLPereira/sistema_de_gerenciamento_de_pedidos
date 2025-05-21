@@ -1,10 +1,12 @@
 from cliente import Cliente
 from item import Item
+from pedido.pedido_retirada import PedidoRetirada
 
 
 cliente = Cliente("Allysson", "Céu")
-item = Item("Bíblia", "100")
+item_1 = Item("Bíblia", 100)
+item_2 = Item("Assinatura SOLYD", 1360)
+itens = [item_1, item_2]
 
-
-print(f"Cliente: {cliente.nome}\nEndereço: {cliente.endereco}")
-print(f"Item: {item.nome}\nValor: R${item.preco}")
+pedido_retirada = PedidoRetirada(cliente, itens)
+print(f"Preço total: {pedido_retirada.calcular_total():.2f}")
