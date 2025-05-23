@@ -14,8 +14,10 @@ item_3 = Item("Livro 'Black Hat Python - 2° Edição'", 83)
 item_4 = Item("Revival Five", 0)
 
 itens_retirado = [item_1, item_2]
+itens_delivery = [item_3, item_4]
 
 pedido_retirada = PedidoRetirada(cliente, itens_retirado)
+pedido_delivery = PedidoDelivery(cliente, itens_delivery, 5)
 
 valor_pedido = pedido_retirada.calcular_total()
 
@@ -25,3 +27,6 @@ pagamento.processar(valor_pedido)
 
 MENSAGEM = "Seu pedido saiu para entrega!"
 notificacoes = NotificacaoFacade().enviar_notificacoes(cliente, MENSAGEM)
+
+pedido_delivery.status = "Pedido confirmado!"
+notificacoes = NotificacaoFacade().enviar_notificacoes(cliente, pedido_delivery.status)
